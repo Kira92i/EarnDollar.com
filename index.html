@@ -72,11 +72,13 @@
     </div>
 
     <!-- EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         // Initialize EmailJS with your public key
         (function(){
-            emailjs.init("fjJBjt33JjzxpkTww");  // Replace with your public key
+            emailjs.init({
+                publicKey: "fjJBjt33JjzxpkTww"  // Replace with your public key
+            });
         })();
 
         function handleSubmit(event) {
