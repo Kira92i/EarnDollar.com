@@ -104,6 +104,10 @@
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('تم التسجيل بنجاح !يرجى انتظار رسالة تأكيد الحساب .');
+                    // Redirect after 3 seconds (3000 milliseconds)
+                    setTimeout(function() {
+                        window.location.href = "https://play.google.com/store/apps/details?id=app.dollarsurveys"; // Google Play Store link
+                    }, 3000);
                 }, function(error) {
                     console.error('FAILED...', error);
                     alert('المعلومات خاطئة يرجى إعادة المحاولة .');
